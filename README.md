@@ -1,6 +1,6 @@
 <h1 align="center"> DoorControl 🚀 </h1>
 <h4 align="center">
-  Sistema completo de controle de portas que roda em um microcontrolador ESP8266.
+  Sistema completo de controle de acesso que roda em um microcontrolador ESP8266.
   Ele controla a abertura de portas e publica informações via MQTT, podendo ser acionado por diversos métodos.
 </h4>
 <br />
