@@ -10,16 +10,16 @@
 #define NOTE_D4 294
 
 // Substitua com suas credenciais de rede
-const char *ssid = "INPACTA";
-const char *password = "INPACTA09";
-const char *mqttServer = "10.6.1.42";
+const char* ssid = "NOME_DA_REDE";
+const char* password = "SENHA_DO_WIFI";
+const char* mqttServer = "endereco_do_broker";
 const int mqttPort = 1883;
-const char *mqttUser = "mqtt";
-const char *mqttPassword = "lar_mqtt";
+const char* mqttUser = "usuario"; // Opcional
+const char* mqttPassword = "senha"; // Opcional
 
 // Tópico MQTT para receber mensagens
-const char *topicStatus_TAG = "IOT/RFID/INPACTA/LASTACESS";
-const char *topicStatus_RF = "INPACTA/ACESSO/PESSOA/CONHECIDA";
+const char *topicStatus_TAG = "SEU/TOPICO";
+const char *topicStatus_RF = "SEU/TOPICO";
 
 // Inicializa o cliente WiFi e o cliente MQTT
 WiFiClient espClient;
