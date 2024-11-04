@@ -194,36 +194,8 @@ void loop()
   int sensorValue = digitalRead(buttonPin);
 
   if (sensorValue == HIGH)
-  {
-    if (!sensorActive && !sensorProcessed)
-    {
-      sensorActivatedTime = millis();
-      sensorActive = true;
-    }
-
-    if (sensorActive)
-    {
-      unsigned long currentTime = millis();
-      unsigned long elapsedTime = currentTime - sensorActivatedTime;
-
-      if (elapsedTime < ignoreIntervalSensor)
-      {
-        openDoor();
-        sensorActive = false;   // Reset the sensor state after opening the door
-        sensorProcessed = true; // Mark the sensor as processed
-      }
-
-      Serial.println("Modo noturno ativado!");
-    }
-  }
-  else
-  {
-    if (sensorProcessed)
-    {
-      Serial.println("Modo noturno desativado!");
-      sensorActive = false;
-      sensorProcessed = false; // Reset the processed state when the sensor is deactivated
-    }
+  {  
+    openDoor();
   }
 
   client.loop();
